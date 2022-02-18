@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Registration Form</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="robots" content="noindex, follow">
+<h1>registration form</h1>
+</head>
+<body>
+<form action="#">
+<div class="error-text"></div>
+<div class="field">
+<label for="uname"><b>uname</b></label>
+<input type="text" placeholder="Enter username" name="uname" required>
+</div>
+<div class="field">
+<label for="pswrd_1"><b>Password</b></label>
+<input  id="pswrd_1" type="pass" placeholder="Enter password" required>
+</div>
+<div class="field">
+<label for="pswrd_2"><b>Confirm password</b></label>
+<input id="pswrd_2" type="pass" placeholder="Confirm password" required>
+</div>
+<input type="submit" value="Register">
+</form>
+<div id="test">
+</div>
+<script>
+const pswrd_1 = document.querySelector("#pswrd_1");
+const pswrd_2 = document.querySelector("#pswrd_2");
+const errorText = document.querySelector(".error-text");
+function check(){
+if(pswrd_1.value != pswrd_2.value){
+errorText.style.display = "block";
+errorText.classList.remove("matched");
+errorText.textContent = "Confirm Password Not Match";
+ return false;
+}
+else{
+errorText.style.display = "block";
+errorText.classList.add("matched");
+errorText.textContent = " Confirm Password Matched";
+ return false;
+   }
+ }
+alertMessage.innerText = "Successful registration";
+</script>
+</body>
+</html>
